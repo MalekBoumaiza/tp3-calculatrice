@@ -1,0 +1,17 @@
+syntax  =  "proto3";
+
+package calculatricePackage;
+
+service Calculator {
+  rpc Calculate (BinaryOperation) returns (CalculationResult);
+};
+
+message BinaryOperation {
+  int32 val_1 = 1;
+  int32 val_2 = 2;
+  string operation = 3;
+};
+
+message CalculationResult {
+  string result = 1;
+};
